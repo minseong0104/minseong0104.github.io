@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {box-sizing: border-box;}
+		body {
+		   background-color: #d1fdff;
+		   display: flex;
+		   align-items: center;
+		   align-content: center;
+		   justify-content: center;
+		   perspective: 1000px;
+		    height: 100vh;
+		    overflow: hidden;
+		}
+		.cube {
+		   position: relative;
+		   width: 100px; height: 100px;
+		   transform: rotateX(-40deg) rotatey(60deg) translatez(0);
+		   transform-style: preserve-3d;
+		   transform-origin: 50px 50px -50px;
+			 animation: rotate 8000ms linear infinite;
+		}
+		.cube div {
+		   display: flex;
+		   align-items: center;
+		   align-content: center;
+		   justify-content: center;
+		   position: absolute;
+		   top: 0; left: 0;
+		   width: 100px; height: 100px;
+		   background: #495453;
+		   opacity: 0.75s;
+		}
+		.cube div:nth-child(1){
+		   background: #fff8e1 ;
+		   transform-origin: center top;
+		   transform: rotatex(90deg) translatey(-100px);
+			 animation: top-init 4000ms ease-in-out 2,
+									top 4000ms ease-in-out 8000ms infinite;
+		}
+		.cube div:nth-child(1):before {
+			content:'w'; color: #000; font-size: 24px;
+		}
+		.cube div:nth-child(2) {
+		   background: #ffecb3 ;
+		   transform-origin: center bottom;
+		   transform: rotatex(-90deg) translatey(100px);
+			 animation: bottom-init 4000ms ease-in-out 4,
+				          bottom 4000ms ease-in-out 8000ms infinite;
+		}
+		.cube div:nth-child(3) { 
+		   background: #ffe082 ;
+			transform-origin: left center;
+			transform: rotatey(-90deg) translatex(-100px);
+			animation: left-init 4000ms ease-in-out 4,
+				         left 4000ms ease-in-out 8000ms infinite;
+		}
+		.cube div:nth-child(4) {
+			background: #ffd54f ;
+			transform-origin: right center;
+			transform: rotatey(90deg) translatex(100px);
+			animation: right-init 4000ms ease-in-out 4,
+				         right 4000ms ease-in-out 8000ms infinite;
+		}
+		.cube div:nth-child(5) {
+			background: #ffca28 ;
+			transform-origin: center center;
+			transform: rotatex(0deg);
+			animation: front-init 4000ms ease-in-out 4,
+				         front 4000ms ease-in-out 8000ms infinite;
+		}
+		.cube div:nth-child(6) {
+			background: #ffc107 ;
+			transform-origin: center center;
+			transform: rotatey(180deg) translatez(100px);
+			animation: back-init 4000ms ease-in-out 4,
+				         back 4000ms ease-in-out 8000ms infinite;
+		}
+
+		@keyframes rotate {
+			0% {transform: rotatex(0deg) rotatey(0deg) rotatez(0deg) translatex(0);}
+			100% {transform: rotatex(360deg) rotatey(360deg) rotatez(360deg) translatex(0);}
+		}
+
+		@keyframes top-init {
+			0%   {transform: rotatex(90deg) translatey(-100px) translatez(0);}
+			50%  {transform: rotatex(90deg) translatey(-100px) translatez(50px);}
+			100% {transform: rotatex(90deg) translatey(-100px) translatez(0);}
+		}
+		@keyframes bottom-init {
+			0%   {transform: rotatex(-90deg) translatey(100px) translatez(0);}
+			50%  {transform: rotatex(-90deg) translatey(100px) translatez(50px);}
+			100% {transform: rotatex(-90deg) translatey(100px) translatez(0);}
+		}
+		@keyframes top    {
+			0%   {transform: rotatex(90deg) translatey(-100px) translatez(0);}
+			50%  {transform: rotatex(90deg) translatey(-100px) translatez(100px);}
+			100% {transform: rotatex(90deg) translatey(-100px) translatez(0);}
+		}
+		@keyframes bottom {
+			0%   {transform: rotatex(-90deg) translatey(100px) translatez(0);}
+			50%  {transform: rotatex(-90deg) translatey(100px) translatez(100px);}
+			100% {transform: rotatex(-90deg) translatey(100px) translatez(0);}
+		}
+		@keyframes left-init {
+			0%   {transform: rotatey(-90deg) translatex(-100px) translatez(0);}
+			50%  {transform: rotatey(-90deg) translatex(-100px) translatez(50px);}
+			100% {transform: rotatey(-90deg) translatex(-100px) translatez(0);}
+		}
+		@keyframes right-init {
+			0%   {transform: rotatey(90deg) translatex(100px) translatez(0);}
+			50%  {transform: rotatey(90deg) translatex(100px) translatez(50px);}
+			100% {transform: rotatey(90deg) translatex(100px) translatez(0);}
+		}
+		@keyframes left  {
+			0%   {transform: rotatey(-90deg) translatex(-100px) scaley(1);}
+			50%  {transform: rotatey(-90deg) translatex(-100px) scaley(3);}
+			100% {transform: rotatey(-90deg) translatex(-100px) scaley(1);}
+		}
+		@keyframes right {
+			0%   {transform: rotatey(90deg) translatex(100px) scaley(1);}
+			50%  {transform: rotatey(90deg) translatex(100px) scaley(3);}
+			100% {transform: rotatey(90deg) translatex(100px) scaley(1);}
+		}
+		@keyframes front-init {
+			0%   {transform: rotatex(0deg) translatez(0px);}
+			50%  {transform: rotatex(0deg) translatez(50px);}
+			100% {transform: rotatex(0deg) translatez(0px);}
+		}
+		@keyframes back-init {
+			0%   {transform: rotatey(180deg) translatez(100px) translatez(0);}
+			50%  {transform: rotatey(180deg) translatez(100px) translatez(50px);}
+			100% {transform: rotatey(180deg) translatez(100px) translatez(0);}
+		}
+		@keyframes front {
+			0%   {transform: rotatex(0deg)  scaley(1);}
+			50%  {transform: rotatex(0deg)  scaley(3);}
+			100% {transform: rotatex(0deg)  scaley(1);}}
+		@keyframes back  {
+			0%   {transform: rotatey(180deg) translatez(100px) scaley(1);}
+			50%  {transform: rotatey(180deg) translatez(100px) scaley(3);}
+			100% {transform: rotatey(180deg) translatez(100px) scaley(1);}
+		}
+	</style>
+</head>
+<body>
+	<div class="cube">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+</body>
+</html>

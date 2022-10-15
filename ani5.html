@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body {background-color: #1a237e; overflow: hidden;}
+			.hand {position: absolute; left: 0; top: 0;}
+			.btn {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100vh;
+			}
+			.btn > span {
+				background-color: #fff; 
+				padding: 13px 20px;
+				text-decoration: none;
+				border-radius: 3px;
+				color: rgba(0,0,0,0.7);
+				box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+				margin: 10px;
+			}
+	</style>
+</head>
+<body>
+	<div>
+		<div class="hand h1"><img src="https://tistory2.daumcdn.net/tistory/2851562/skin/images/cursor1.png"></div>
+		<div class="hand h2"><img src="https://tistory2.daumcdn.net/tistory/2851562/skin/images/cursor2.png"></div>
+		<div class="hand h3"><img src="https://tistory2.daumcdn.net/tistory/2851562/skin/images/cursor3.png"></div>
+		<div class="hand h4"><img src="https://tistory2.daumcdn.net/tistory/2851562/skin/images/cursor4.png"></div>
+		<div class="btn">
+			<span class="h1Btn">Mouse1</span>
+			<span class="h2Btn">Mouse2</span>
+			<span class="h3Btn">Mouse3</span>
+			<span class="h4Btn">Mouse4</span>
+		</div>
+	</div>
+</body>
+<script src="assets/js/jquery-1.12.4.js"></script>
+<script src="assets/js/jquery-ui-1.12.1.min.js"></script>
+<script>
+	//이미지를 다 숨겨주세요!!
+	$("img").hide();
+
+	$(".h1Btn").hover(function(){
+		$(".h1").find("img").show();
+	},function(){
+		$(".h1").find("img").hide();
+	});
+
+	$(".h1Btn").mousemove(function(e){
+		$(".h1").css("left", e.pageX+20).css("top",e.pageY+20);
+	});
+
+	$(".h2Btn").hover(function(){
+		$(".h2").find("img").show();
+	},function(){
+		$(".h2").find("img").hide();
+	});
+
+	$(".h2Btn").mousemove(function(e){
+		$(".h2").css("left", e.pageX+20).css("top",e.pageY+20);
+	});
+
+	$(".h3Btn").hover(function(){
+		$(".h3").find("img").show();
+	},function(){
+		$(".h3").find("img").hide();
+	});
+
+	$(".h3Btn").mousemove(function(e){
+		$(".h3").css("left", e.pageX+20).css("top",e.pageY+20);
+	});
+
+	$(".h4Btn").hover(function(){
+		$(".h4").find("img").show();
+	},function(){
+		$(".h4").find("img").hide();
+	});
+
+	$(".h4Btn").mousemove(function(e){
+		$(".h4").css("left", e.pageX+20).css("top",e.pageY+20);
+	});
+</script>
+</html>

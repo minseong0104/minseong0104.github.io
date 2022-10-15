@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body {
+		background: #000;
+		background-size: 100%;
+		font-size: 80px; overflow: hidden;
+	}
+	svg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		font-family: 'Russo One', sans-serif;
+	}
+	.text-copy {
+		fill: none;
+		stroke: white;
+		stroke-width: 3px;
+		stroke-dasharray: 7% 28%;
+		animation: stroke 9s infinite linear
+	}
+	.text-copy:nth-child(1){
+		stroke: #ffeb3b  ;
+		stroke-dasharray: 7%;
+	}
+	.text-copy:nth-child(2){
+		stroke: #b2ff59  ;
+		stroke-dasharray: 14%;
+	}
+	.text-copy:nth-child(3){
+		stroke: #00bcd4 ;
+		stroke-dasharray: 21%;
+	}
+	.text-copy:nth-child(4){
+		stroke: #69f0ae  ;
+		stroke-dasharray: 28%;
+	}
+	.text-copy:nth-child(5){
+		stroke: #a7ffeb  ;
+		stroke-dasharray: 35%;
+	}
+	@keyframes stroke {
+		50% {
+			stroke-dashoffset: 35%;
+			stroke-dasharray: 0 15%
+		}
+	}
+	</style>
+</head>
+<body>
+	<link href="https://fonts.googleapis.com/css?family=Knewave|Lobster|Russo+One&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese" rel="stylesheet">
+	<svg>
+		<symbol id="s-text">
+			<text text-anchor="middle" x="50%" y="50%">kim ju-tan</text>
+		</symbol>
+	 
+		<g class="g-ants">
+			<use xlink:href="#s-text" class="text-copy"></use>
+			<use xlink:href="#s-text" class="text-copy"></use>
+			<use xlink:href="#s-text" class="text-copy"></use>
+			<use xlink:href="#s-text" class="text-copy"></use>
+			<use xlink:href="#s-text" class="text-copy"></use>
+		</g>
+	</svg>
+</body>
+<script></script>
+</html>

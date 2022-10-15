@@ -1,0 +1,709 @@
+
+.gabia {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/gabia.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.gabia2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/gabia2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.gabia3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/gabia3.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+#base {
+  z-index: 0;
+}
+
+#red {
+  background-color: rgba(0, 128, 0, 0.16);
+  background-blend-mode: hue;
+}
+
+#cyan {
+  background-color: rgba(0, 255, 158, 0.25);
+  background-blend-mode: darken;
+}
+
+#transparent {
+  background-color: transparent;
+  background-blend-mode: unset;
+}
+
+.s3-img1.visual-middle #red {animation: img-glitch-red 4s infinite linear alternate-reverse both;}
+.s3-img2.visual-up #red {animation: img-glitch-red 4s 0.8s infinite linear alternate-reverse both;}
+.s3-img3.visual-fast #red {animation: img-glitch-red 4s 1.6s infinite linear alternate-reverse both;}
+
+.s3-img1.visual-middle #cyan {animation: img-glitch-cyan 5s infinite linear alternate both;}
+.s3-img2.visual-up #cyan {animation: img-glitch-cyan 5s 0.8s infinite linear alternate both;}
+.s3-img3.visual-fast #cyan {animation: img-glitch-cyan 5s 1.6s infinite linear alternate both;}
+
+.s3-img1.visual-middle #transparent {animation: img-glitch-transparent 4s infinite linear alternate-reverse both;}
+.s3-img2.visual-up #transparent {animation: img-glitch-transparent 4s 0.8s infinite linear alternate-reverse both;}
+.s3-img3.visual-fast #transparent {animation: img-glitch-transparent 4s 1.6s infinite linear alternate-reverse both;}
+
+@-webkit-keyframes img-glitch-red {
+  10% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  20% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  30% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  40% {
+    -webkit-clip-path: polygon(0% 54%, 100% 54%, 100% 53%, 0% 53%);
+            clip-path: polygon(0% 54%, 100% 54%, 100% 53%, 0% 53%);
+    -webkit-transform: scaleX(0.76);
+            transform: scaleX(0.76);
+  }
+  50% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  60% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  70% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  80% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  90% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+}
+
+@keyframes img-glitch-red {
+  10% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  20% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  30% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  40% {
+    -webkit-clip-path: polygon(0% 54%, 100% 54%, 100% 53%, 0% 53%);
+            clip-path: polygon(0% 54%, 100% 54%, 100% 53%, 0% 53%);
+    -webkit-transform: scaleX(0.76);
+            transform: scaleX(0.76);
+  }
+  50% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  60% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  70% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  80% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  90% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+}
+@-webkit-keyframes img-glitch-cyan {
+  3.3333333333% {
+    -webkit-clip-path: polygon(0% 32%, 100% 32%, 100% 31%, 0% 31%);
+            clip-path: polygon(0% 32%, 100% 32%, 100% 31%, 0% 31%);
+  }
+  6.6666666667% {
+    -webkit-clip-path: polygon(0% 65%, 100% 65%, 100% 64%, 0% 64%);
+            clip-path: polygon(0% 65%, 100% 65%, 100% 64%, 0% 64%);
+  }
+  10% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  13.3333333333% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  16.6666666667% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  20% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  23.3333333333% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  26.6666666667% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  30% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  33.3333333333% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  36.6666666667% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  40% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  43.3333333333% {
+    -webkit-clip-path: polygon(0% 72%, 100% 72%, 100% 69%, 0% 69%);
+            clip-path: polygon(0% 72%, 100% 72%, 100% 69%, 0% 69%);
+  }
+  46.6666666667% {
+    -webkit-clip-path: polygon(0% 64%, 100% 64%, 100% 61%, 0% 61%);
+            clip-path: polygon(0% 64%, 100% 64%, 100% 61%, 0% 61%);
+  }
+  50% {
+    -webkit-clip-path: polygon(0% 84%, 100% 84%, 100% 82%, 0% 82%);
+            clip-path: polygon(0% 84%, 100% 84%, 100% 82%, 0% 82%);
+  }
+  53.3333333333% {
+    -webkit-clip-path: polygon(0% 60%, 100% 60%, 100% 58%, 0% 58%);
+            clip-path: polygon(0% 60%, 100% 60%, 100% 58%, 0% 58%);
+  }
+  56.6666666667% {
+    -webkit-clip-path: polygon(0% 51%, 100% 51%, 100% 48%, 0% 48%);
+            clip-path: polygon(0% 51%, 100% 51%, 100% 48%, 0% 48%);
+  }
+  60% {
+    -webkit-clip-path: polygon(0% 32%, 100% 32%, 100% 29%, 0% 29%);
+            clip-path: polygon(0% 32%, 100% 32%, 100% 29%, 0% 29%);
+  }
+  63.3333333333% {
+    -webkit-clip-path: polygon(0% 86%, 100% 86%, 100% 86%, 0% 86%);
+            clip-path: polygon(0% 86%, 100% 86%, 100% 86%, 0% 86%);
+  }
+  66.6666666667% {
+    -webkit-clip-path: polygon(0% 54%, 100% 54%, 100% 54%, 0% 54%);
+            clip-path: polygon(0% 54%, 100% 54%, 100% 54%, 0% 54%);
+  }
+  70% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  73.3333333333% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  76.6666666667% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  80% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  83.3333333333% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  86.6666666667% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  90% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  93.3333333333% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  96.6666666667% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+}
+@keyframes img-glitch-cyan {
+  3.3333333333% {
+    -webkit-clip-path: polygon(0% 32%, 100% 32%, 100% 31%, 0% 31%);
+            clip-path: polygon(0% 32%, 100% 32%, 100% 31%, 0% 31%);
+  }
+  6.6666666667% {
+    -webkit-clip-path: polygon(0% 65%, 100% 65%, 100% 64%, 0% 64%);
+            clip-path: polygon(0% 65%, 100% 65%, 100% 64%, 0% 64%);
+  }
+  10% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  13.3333333333% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  16.6666666667% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  20% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  23.3333333333% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  26.6666666667% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  30% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  33.3333333333% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  36.6666666667% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  40% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  43.3333333333% {
+    -webkit-clip-path: polygon(0% 72%, 100% 72%, 100% 69%, 0% 69%);
+            clip-path: polygon(0% 72%, 100% 72%, 100% 69%, 0% 69%);
+  }
+  46.6666666667% {
+    -webkit-clip-path: polygon(0% 64%, 100% 64%, 100% 61%, 0% 61%);
+            clip-path: polygon(0% 64%, 100% 64%, 100% 61%, 0% 61%);
+  }
+  50% {
+    -webkit-clip-path: polygon(0% 84%, 100% 84%, 100% 82%, 0% 82%);
+            clip-path: polygon(0% 84%, 100% 84%, 100% 82%, 0% 82%);
+  }
+  53.3333333333% {
+    -webkit-clip-path: polygon(0% 60%, 100% 60%, 100% 58%, 0% 58%);
+            clip-path: polygon(0% 60%, 100% 60%, 100% 58%, 0% 58%);
+  }
+  56.6666666667% {
+    -webkit-clip-path: polygon(0% 51%, 100% 51%, 100% 48%, 0% 48%);
+            clip-path: polygon(0% 51%, 100% 51%, 100% 48%, 0% 48%);
+  }
+  60% {
+    -webkit-clip-path: polygon(0% 32%, 100% 32%, 100% 29%, 0% 29%);
+            clip-path: polygon(0% 32%, 100% 32%, 100% 29%, 0% 29%);
+  }
+  63.3333333333% {
+    -webkit-clip-path: polygon(0% 86%, 100% 86%, 100% 86%, 0% 86%);
+            clip-path: polygon(0% 86%, 100% 86%, 100% 86%, 0% 86%);
+  }
+  66.6666666667% {
+    -webkit-clip-path: polygon(0% 54%, 100% 54%, 100% 54%, 0% 54%);
+            clip-path: polygon(0% 54%, 100% 54%, 100% 54%, 0% 54%);
+  }
+  70% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  73.3333333333% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  76.6666666667% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  80% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  83.3333333333% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  86.6666666667% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  90% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  93.3333333333% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  96.6666666667% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+            clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+}
+@-webkit-keyframes img-glitch-transparent {
+  4% {
+    -webkit-clip-path: polygon(0% 13%, 100% 13%, 100% 36%, 0% 36%);
+            clip-path: polygon(0% 13%, 100% 13%, 100% 36%, 0% 36%);
+    -webkit-transform: translate(8px, 0);
+            transform: translate(8px, 0);
+  }
+  8% {
+    -webkit-clip-path: polygon(0% 17%, 100% 17%, 100% 45%, 0% 45%);
+            clip-path: polygon(0% 17%, 100% 17%, 100% 45%, 0% 45%);
+    -webkit-transform: translate(2px, 0);
+            transform: translate(2px, 0);
+  }
+  12% {
+    -webkit-clip-path: polygon(0% 27%, 100% 27%, 100% 73%, 0% 73%);
+            clip-path: polygon(0% 27%, 100% 27%, 100% 73%, 0% 73%);
+    -webkit-transform: translate(9px, 0);
+            transform: translate(9px, 0);
+  }
+  16% {
+    -webkit-clip-path: polygon(0% 50%, 100% 50%, 100% 38%, 0% 38%);
+            clip-path: polygon(0% 50%, 100% 50%, 100% 38%, 0% 38%);
+    -webkit-transform: translate(1px, 0);
+            transform: translate(1px, 0);
+  }
+  20% {
+    -webkit-clip-path: polygon(0% 25%, 100% 25%, 100% 32%, 0% 32%);
+            clip-path: polygon(0% 25%, 100% 25%, 100% 32%, 0% 32%);
+    -webkit-transform: translate(6px, 0);
+            transform: translate(6px, 0);
+  }
+  24% {
+    -webkit-clip-path: polygon(0% 39%, 100% 39%, 100% 49%, 0% 49%);
+            clip-path: polygon(0% 39%, 100% 39%, 100% 49%, 0% 49%);
+    -webkit-transform: translate(3px, 0);
+            transform: translate(3px, 0);
+  }
+  28% {
+    -webkit-clip-path: polygon(0% 27%, 100% 27%, 100% 50%, 0% 50%);
+            clip-path: polygon(0% 27%, 100% 27%, 100% 50%, 0% 50%);
+    -webkit-transform: translate(6px, 0);
+            transform: translate(6px, 0);
+  }
+  32% {
+    -webkit-clip-path: polygon(0% 35%, 100% 35%, 100% 42%, 0% 42%);
+            clip-path: polygon(0% 35%, 100% 35%, 100% 42%, 0% 42%);
+    -webkit-transform: translate(7px, 0);
+            transform: translate(7px, 0);
+  }
+  36% {
+    -webkit-clip-path: polygon(0% 8%, 100% 8%, 100% 44%, 0% 44%);
+            clip-path: polygon(0% 8%, 100% 8%, 100% 44%, 0% 44%);
+    -webkit-transform: translate(5px, 0);
+            transform: translate(5px, 0);
+  }
+  40% {
+    -webkit-clip-path: polygon(0% 29%, 100% 29%, 100% 43%, 0% 43%);
+            clip-path: polygon(0% 29%, 100% 29%, 100% 43%, 0% 43%);
+    -webkit-transform: translate(8px, 0);
+            transform: translate(8px, 0);
+  }
+  44% {
+    -webkit-clip-path: polygon(0% 10%, 100% 10%, 100% 46%, 0% 46%);
+            clip-path: polygon(0% 10%, 100% 10%, 100% 46%, 0% 46%);
+    -webkit-transform: translate(8px, 0);
+            transform: translate(8px, 0);
+  }
+  48% {
+    -webkit-clip-path: polygon(0% 26%, 100% 26%, 100% 58%, 0% 58%);
+            clip-path: polygon(0% 26%, 100% 26%, 100% 58%, 0% 58%);
+    -webkit-transform: translate(5px, 0);
+            transform: translate(5px, 0);
+  }
+  52% {
+    -webkit-clip-path: polygon(0% 34%, 100% 34%, 100% 53%, 0% 53%);
+            clip-path: polygon(0% 34%, 100% 34%, 100% 53%, 0% 53%);
+    -webkit-transform: translate(6px, 0);
+            transform: translate(6px, 0);
+  }
+  56% {
+    -webkit-clip-path: polygon(0% 9%, 100% 9%, 100% 74%, 0% 74%);
+            clip-path: polygon(0% 9%, 100% 9%, 100% 74%, 0% 74%);
+    -webkit-transform: translate(9px, 0);
+            transform: translate(9px, 0);
+  }
+  60% {
+    -webkit-clip-path: polygon(0% 19%, 100% 19%, 100% 51%, 0% 51%);
+            clip-path: polygon(0% 19%, 100% 19%, 100% 51%, 0% 51%);
+    -webkit-transform: translate(7px, 0);
+            transform: translate(7px, 0);
+  }
+  64% {
+    -webkit-clip-path: polygon(0% 31%, 100% 31%, 100% 52%, 0% 52%);
+            clip-path: polygon(0% 31%, 100% 31%, 100% 52%, 0% 52%);
+    -webkit-transform: translate(9px, 0);
+            transform: translate(9px, 0);
+  }
+  68% {
+    -webkit-clip-path: polygon(0% 35%, 100% 35%, 100% 29%, 0% 29%);
+            clip-path: polygon(0% 35%, 100% 35%, 100% 29%, 0% 29%);
+    -webkit-transform: translate(5px, 0);
+            transform: translate(5px, 0);
+  }
+  72% {
+    -webkit-clip-path: polygon(0% 38%, 100% 38%, 100% 37%, 0% 37%);
+            clip-path: polygon(0% 38%, 100% 38%, 100% 37%, 0% 37%);
+    -webkit-transform: translate(2px, 0);
+            transform: translate(2px, 0);
+  }
+  76% {
+    -webkit-clip-path: polygon(0% 49%, 100% 49%, 100% 64%, 0% 64%);
+            clip-path: polygon(0% 49%, 100% 49%, 100% 64%, 0% 64%);
+    -webkit-transform: translate(5px, 0);
+            transform: translate(5px, 0);
+  }
+  80% {
+    -webkit-clip-path: polygon(0% 7%, 100% 7%, 100% 26%, 0% 26%);
+            clip-path: polygon(0% 7%, 100% 7%, 100% 26%, 0% 26%);
+    -webkit-transform: translate(6px, 0);
+            transform: translate(6px, 0);
+  }
+  84% {
+    -webkit-clip-path: polygon(0% 47%, 100% 47%, 100% 37%, 0% 37%);
+            clip-path: polygon(0% 47%, 100% 47%, 100% 37%, 0% 37%);
+    -webkit-transform: translate(9px, 0);
+            transform: translate(9px, 0);
+  }
+  88% {
+    -webkit-clip-path: polygon(0% 50%, 100% 50%, 100% 64%, 0% 64%);
+            clip-path: polygon(0% 50%, 100% 50%, 100% 64%, 0% 64%);
+    -webkit-transform: translate(8px, 0);
+            transform: translate(8px, 0);
+  }
+  92% {
+    -webkit-clip-path: polygon(0% 26%, 100% 26%, 100% 68%, 0% 68%);
+            clip-path: polygon(0% 26%, 100% 26%, 100% 68%, 0% 68%);
+    -webkit-transform: translate(10px, 0);
+            transform: translate(10px, 0);
+  }
+  96% {
+    -webkit-clip-path: polygon(0% 27%, 100% 27%, 100% 52%, 0% 52%);
+            clip-path: polygon(0% 27%, 100% 27%, 100% 52%, 0% 52%);
+    -webkit-transform: translate(4px, 0);
+            transform: translate(4px, 0);
+  }
+  100% {
+    -webkit-clip-path: polygon(0% 9%, 100% 9%, 100% 31%, 0% 31%);
+            clip-path: polygon(0% 9%, 100% 9%, 100% 31%, 0% 31%);
+    -webkit-transform: translate(8px, 0);
+            transform: translate(8px, 0);
+  }
+}
+@keyframes img-glitch-transparent {
+  4% {
+    -webkit-clip-path: polygon(0% 13%, 100% 13%, 100% 36%, 0% 36%);
+            clip-path: polygon(0% 13%, 100% 13%, 100% 36%, 0% 36%);
+    -webkit-transform: translate(8px, 0);
+            transform: translate(8px, 0);
+  }
+  8% {
+    -webkit-clip-path: polygon(0% 17%, 100% 17%, 100% 45%, 0% 45%);
+            clip-path: polygon(0% 17%, 100% 17%, 100% 45%, 0% 45%);
+    -webkit-transform: translate(2px, 0);
+            transform: translate(2px, 0);
+  }
+  12% {
+    -webkit-clip-path: polygon(0% 27%, 100% 27%, 100% 73%, 0% 73%);
+            clip-path: polygon(0% 27%, 100% 27%, 100% 73%, 0% 73%);
+    -webkit-transform: translate(9px, 0);
+            transform: translate(9px, 0);
+  }
+  16% {
+    -webkit-clip-path: polygon(0% 50%, 100% 50%, 100% 38%, 0% 38%);
+            clip-path: polygon(0% 50%, 100% 50%, 100% 38%, 0% 38%);
+    -webkit-transform: translate(1px, 0);
+            transform: translate(1px, 0);
+  }
+  20% {
+    -webkit-clip-path: polygon(0% 25%, 100% 25%, 100% 32%, 0% 32%);
+            clip-path: polygon(0% 25%, 100% 25%, 100% 32%, 0% 32%);
+    -webkit-transform: translate(6px, 0);
+            transform: translate(6px, 0);
+  }
+  24% {
+    -webkit-clip-path: polygon(0% 39%, 100% 39%, 100% 49%, 0% 49%);
+            clip-path: polygon(0% 39%, 100% 39%, 100% 49%, 0% 49%);
+    -webkit-transform: translate(3px, 0);
+            transform: translate(3px, 0);
+  }
+  28% {
+    -webkit-clip-path: polygon(0% 27%, 100% 27%, 100% 50%, 0% 50%);
+            clip-path: polygon(0% 27%, 100% 27%, 100% 50%, 0% 50%);
+    -webkit-transform: translate(6px, 0);
+            transform: translate(6px, 0);
+  }
+  32% {
+    -webkit-clip-path: polygon(0% 35%, 100% 35%, 100% 42%, 0% 42%);
+            clip-path: polygon(0% 35%, 100% 35%, 100% 42%, 0% 42%);
+    -webkit-transform: translate(7px, 0);
+            transform: translate(7px, 0);
+  }
+  36% {
+    -webkit-clip-path: polygon(0% 8%, 100% 8%, 100% 44%, 0% 44%);
+            clip-path: polygon(0% 8%, 100% 8%, 100% 44%, 0% 44%);
+    -webkit-transform: translate(5px, 0);
+            transform: translate(5px, 0);
+  }
+  40% {
+    -webkit-clip-path: polygon(0% 29%, 100% 29%, 100% 43%, 0% 43%);
+            clip-path: polygon(0% 29%, 100% 29%, 100% 43%, 0% 43%);
+    -webkit-transform: translate(8px, 0);
+            transform: translate(8px, 0);
+  }
+  44% {
+    -webkit-clip-path: polygon(0% 10%, 100% 10%, 100% 46%, 0% 46%);
+            clip-path: polygon(0% 10%, 100% 10%, 100% 46%, 0% 46%);
+    -webkit-transform: translate(8px, 0);
+            transform: translate(8px, 0);
+  }
+  48% {
+    -webkit-clip-path: polygon(0% 26%, 100% 26%, 100% 58%, 0% 58%);
+            clip-path: polygon(0% 26%, 100% 26%, 100% 58%, 0% 58%);
+    -webkit-transform: translate(5px, 0);
+            transform: translate(5px, 0);
+  }
+  52% {
+    -webkit-clip-path: polygon(0% 34%, 100% 34%, 100% 53%, 0% 53%);
+            clip-path: polygon(0% 34%, 100% 34%, 100% 53%, 0% 53%);
+    -webkit-transform: translate(6px, 0);
+            transform: translate(6px, 0);
+  }
+  56% {
+    -webkit-clip-path: polygon(0% 9%, 100% 9%, 100% 74%, 0% 74%);
+            clip-path: polygon(0% 9%, 100% 9%, 100% 74%, 0% 74%);
+    -webkit-transform: translate(9px, 0);
+            transform: translate(9px, 0);
+  }
+  60% {
+    -webkit-clip-path: polygon(0% 19%, 100% 19%, 100% 51%, 0% 51%);
+            clip-path: polygon(0% 19%, 100% 19%, 100% 51%, 0% 51%);
+    -webkit-transform: translate(7px, 0);
+            transform: translate(7px, 0);
+  }
+  64% {
+    -webkit-clip-path: polygon(0% 31%, 100% 31%, 100% 52%, 0% 52%);
+            clip-path: polygon(0% 31%, 100% 31%, 100% 52%, 0% 52%);
+    -webkit-transform: translate(9px, 0);
+            transform: translate(9px, 0);
+  }
+  68% {
+    -webkit-clip-path: polygon(0% 35%, 100% 35%, 100% 29%, 0% 29%);
+            clip-path: polygon(0% 35%, 100% 35%, 100% 29%, 0% 29%);
+    -webkit-transform: translate(5px, 0);
+            transform: translate(5px, 0);
+  }
+  72% {
+    -webkit-clip-path: polygon(0% 38%, 100% 38%, 100% 37%, 0% 37%);
+            clip-path: polygon(0% 38%, 100% 38%, 100% 37%, 0% 37%);
+    -webkit-transform: translate(2px, 0);
+            transform: translate(2px, 0);
+  }
+  76% {
+    -webkit-clip-path: polygon(0% 49%, 100% 49%, 100% 64%, 0% 64%);
+            clip-path: polygon(0% 49%, 100% 49%, 100% 64%, 0% 64%);
+    -webkit-transform: translate(5px, 0);
+            transform: translate(5px, 0);
+  }
+  80% {
+    -webkit-clip-path: polygon(0% 7%, 100% 7%, 100% 26%, 0% 26%);
+            clip-path: polygon(0% 7%, 100% 7%, 100% 26%, 0% 26%);
+    -webkit-transform: translate(6px, 0);
+            transform: translate(6px, 0);
+  }
+  84% {
+    -webkit-clip-path: polygon(0% 47%, 100% 47%, 100% 37%, 0% 37%);
+            clip-path: polygon(0% 47%, 100% 47%, 100% 37%, 0% 37%);
+    -webkit-transform: translate(9px, 0);
+            transform: translate(9px, 0);
+  }
+  88% {
+    -webkit-clip-path: polygon(0% 50%, 100% 50%, 100% 64%, 0% 64%);
+            clip-path: polygon(0% 50%, 100% 50%, 100% 64%, 0% 64%);
+    -webkit-transform: translate(8px, 0);
+            transform: translate(8px, 0);
+  }
+  92% {
+    -webkit-clip-path: polygon(0% 26%, 100% 26%, 100% 68%, 0% 68%);
+            clip-path: polygon(0% 26%, 100% 26%, 100% 68%, 0% 68%);
+    -webkit-transform: translate(10px, 0);
+            transform: translate(10px, 0);
+  }
+  96% {
+    -webkit-clip-path: polygon(0% 27%, 100% 27%, 100% 52%, 0% 52%);
+            clip-path: polygon(0% 27%, 100% 27%, 100% 52%, 0% 52%);
+    -webkit-transform: translate(4px, 0);
+            transform: translate(4px, 0);
+  }
+  100% {
+    -webkit-clip-path: polygon(0% 9%, 100% 9%, 100% 31%, 0% 31%);
+            clip-path: polygon(0% 9%, 100% 9%, 100% 31%, 0% 31%);
+    -webkit-transform: translate(8px, 0);
+            transform: translate(8px, 0);
+  }
+}

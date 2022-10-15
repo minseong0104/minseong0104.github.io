@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*, *:before, *:after {box-sizing: border-box; margin: 0; padding: 0; }
+		body {
+		   background: #1d1d1d; overflow: hidden;
+		}
+		.roket-container {
+		   width: 220px; height: 380px;
+		   position: absolute;
+		   left: 0; top: 0; right: 0; bottom: 0; 
+		   margin: auto;
+		   animation: vibration 0.2s infinite;
+		}
+		@keyframes vibration {
+		   0%   {transform: translate(0,0) rotate(45deg);}
+		   50%  {transform: translate(1px,-1px) rotate(45deg); }
+		   100% {transform: translate(0,0) rotate(45deg);}
+		}
+
+		.capsule { 
+		   width: 111px; height: 154px;
+		   position: absolute; 
+		   left: 46px; top: 5px;
+			 overflow: hidden;
+		}
+		.capsule .top {
+		   position: absolute;
+		   left: 0; width: 0; height: 0; padding: 0;
+		   border-bottom: 62px solid #f3f3f3;
+		   border-left: 56px solid transparent;
+		   border-right: 56px solid transparent;
+		}
+		.capsule .top:after {
+		   content:'';
+		   position: absolute; left: 25px; top: -14px;
+		   width: 0; height: 0;
+		   border-bottom: 84px solid #1d1d1d;
+		   border-left: 0px solid transparent;
+		   border-right: 156px solid transparent;
+		   transform: skew(42deg);
+		}
+		.capsule .top .shadow {
+		   position: absolute;
+		   width: 0; height: 0;
+		   border-bottom: 90px solid #e0e0e0;
+		   border-left: 20px solid transparent;
+		   border-right: 80px solid transparent;
+		   transform: skew(25deg);
+		}
+		.capsule .base {
+		   position: absolute; left: 0; top: 62px; z-index: 110;
+		   width: 112px; height: 99px;
+		   background: linear-gradient(to right, #f3f3f3 63%, #e0e0e0 63%);
+		}
+		.wing-left {
+			position: absolute;
+			left: 16px; top: 82px;
+			width: 0; height: 103px; padding: 0; 
+			border-right: 38px solid gray;
+			border-bottom: 19px solid transparent;
+			border-top: 21px solid transparent;
+			transform: rotate(5deg);
+		}
+		.wing-left:after {
+			content:''; 
+			position: absolute;
+			bottom: -50px; width: 0; height: 0;
+			border-top: 20px solid transparent;
+			border-right: 50px solid #1d1d1d;
+			border-bottom: 50px solid transparent;
+		}
+		.wing-right {
+			position: absolute;
+			top: 67px; right: 30px;
+			height: 97px; width: 0; padding: 0;
+			border-right: 40px solid gray;
+			border-bottom: 15px solid transparent;
+			border-top: 0px solid transparent;
+		}
+		.wing-right:after {
+			content:'';
+			position: absolute;
+			top: -25px; left: -50px;
+			width: 101px; height: 0; 
+			border-top: 23px solid transparent;
+			border-right: 68px solid #1d1d1d;
+			border-bottom: 40px solid transparent;
+		}
+		.tail {
+			position: absolute;
+			width: 101px; height: 0; z-index: 100;
+			top: 153px; left: 51px;
+			border-top: 23px solid gray;
+			border-right: 8px solid transparent;
+			border-left: 9px solid transparent;
+		}
+		.window-big {
+			width: 70px;
+			height: 70px; z-index: 120;
+			background-color: gray;
+			border-radius: 50%;
+			position: absolute;
+			top: 57px; left: 66px;
+		}
+		.window-small {
+			width: 44px; height: 44px; z-index: 130;
+			background: #272425 url("http://kimju7.dothome.co.kr/assets/ico/icon1.jpg");
+			position: absolute;
+			left: 79px; top: 70px;
+			border-radius: 50%;
+		  background-size: 100%
+		}
+		.fire-1 {
+			position: absolute;
+			left: 64px; top: 169px; z-index: 90;
+			width: 70px; height: 70px;
+			background: linear-gradient(135deg, #ef8832 50%, #e82134 50%);
+			transform: rotate(-40deg) skew(1deg, -11deg);
+			animation: main-fire 0.1s ease-in infinite;
+		}
+		@keyframes main-fire {
+			0%   {transform: translate(0, 5px) scale(1.1,1) rotate(-33deg) skew(0deg, -30deg);}
+			100% {transform: translate(0, 0) scale(1.1,2) rotate(-33deg) skew(0deg, -30deg);}
+		}
+		.fire-2 {
+			position: absolute; z-index: 90;
+			left: 63px; top: 230px;
+			width: 33px; height: 33px;
+			background: linear-gradient(135deg, #ef8832 50%, #e82134 50%);
+			transform: rotate(-33deg) skew(0deg, -30deg);
+			animation: fire2 0.3s ease-in infinite;
+		}
+		@keyframes fire2 {
+			0%   {transform: translate(0, -10px) scale(1) rotate(-33deg) skew(0, -30deg); opacity: 1;}
+			100% {transform: translate(0, 50px) scale(0.7) rotate(-33deg) skew(0, -30deg); opacity: 0;}
+		}
+		.fire-3 {
+			position: absolute; z-index: 90;
+			left: 53px; top: 196px;
+			width: 22px; height: 22px;
+			background: linear-gradient(135deg, #ef8832 50%, #e82134 50%);
+			transform: rotate(-33deg) skew(0deg, -30deg);
+			animation: fire2 0.3s ease-in infinite 0.1s;
+		}
+		.fire-4 {
+			position: absolute; z-index: 90;
+			left: 126px; top: 200px;
+			width: 22px; height: 22px;
+			background: linear-gradient(135deg, #ef8832 50%, #e82134 50%);
+			transform: rotate(-33deg) skew(0deg, -30deg);
+			animation: fire2 0.3s ease-in infinite 0.2s;
+		}
+
+		.spark-1 {
+			position: absolute;
+			left: 40px; bottom: 77px;
+			width: 12px; height: 12px;
+			background-color: #e82134;
+			animation: spark-fire 0.24s infinite;
+		}
+		.spark-2 {
+			position: absolute;
+			left: 132px; bottom: 68px;
+			width: 10px; height: 10px;
+			background-color: #e82134;
+			animation: spark-fire 0.24s infinite;
+		}
+		.spark-3 {
+			position: absolute;
+			left: 101px; bottom: 40px;
+			width: 10px; height: 10px;
+			background-color: #e82134;
+			animation: spark-fire 0.24s infinite 0.2s;
+		}
+		.spark-4 {
+			position: absolute;
+			left: 83px; bottom: 20px;
+			width: 10px; height: 10px;
+			background-color: #e82134;
+			animation: spark-fire 0.24s infinite 0.1s;
+		}
+		@keyframes spark-fire {
+			0%   {transform: translate(0,-10px); opacity: 1;}
+			100% {transform: translate(0,50px); opacity: 0;}
+		}
+		.star {
+			position: absolute;
+			width: 4px; height: 4px; z-index: 50;
+			border-radius: 50%;
+			background: linear-gradient(130deg, #fc97e9 20%, #fafc9f 80%, #bdf4f9 100%) fixed;
+			animation: space 0.4s infinite;
+		}
+		.star-1 {left: 50px; top: 10px; animation-delay: 0.1s;}
+		.star-2 {left: 60px; top: 30px; animation-delay: 0.7s;}
+		.star-3 {left: 70px; top: 40px; animation-delay: 0.5s;}
+		.star-4 {left: 30px; top: 90px; animation-delay: 0.3s;}
+		.star-5 {left: 20px; top: 100px; animation-delay: 0.9s;}
+		.star-6 {left: 40px; top: 120px; animation-delay: 0.7s;}
+		.star-7 {left: 70px; top: 200px; animation-delay: 0.8s;}
+		.star-8 {left: 80px; top: 180px; animation-delay: 0.6s;}
+		.star-9 {left: 90px; top: 160px; animation-delay: 0.3s;}
+		.star-10 {left: 120px; top: 70px; animation-delay: 0.5s;}
+		.star-11 {left: 130px; top: 180px; animation-delay: 0.2s;}
+		.star-12 {left: 150px; top: 90px; animation-delay: 0.9s;}
+		.star-13 {left: 10px; top: 210px; animation-delay: 0.8s;}
+		.star-14 {left: 70px; top: 130px; animation-delay: 0.6s;}
+		.star-15 {left: 90px; top: 150px; animation-delay: 0.7s;}
+		.star-16 {left: 160px; top: 30px; animation-delay: 0.2s;}
+		.star-17 {left: 190px; top: 20px; animation-delay: 0.8s;}
+		.star-18 {left: 40px; top: 70px; animation-delay: 0.3s;}
+		.star-19 {left: 78px; top: 90px; animation-delay: 0.9s;}
+		.star-20 {left: 90px; top: 10px; animation-delay: 0.1s;}
+		@keyframes space {
+		   0%   {transform: translate(0, -100px) scale(1,0); opacity:1; }
+		   100% {transform: translate(0, 100px) scale(1,1); opacity:0; }
+		}
+	</style>
+</head>
+<body>
+	<div class="roket-container">
+	
+	<div class="wing-left"></div>
+	<div class="wing-right"></div>
+	<div class="tail"></div>
+	
+	<div class="capsule">
+		<div class="top">
+			<div class="shadow"></div>
+		</div>
+		<div class="base"></div>
+	</div>
+	
+	<div class="window-big"></div>
+	<div class="window-small"></div>
+	
+	<div class="fire-1"></div>
+	<div class="fire-2"></div>
+	<div class="fire-3"></div>
+	<div class="fire-4"></div>
+	
+	<div class="spark-1"></div>
+	<div class="spark-2"></div>
+	<div class="spark-3"></div>
+	<div class="spark-4"></div>
+	
+	<div class="star star-1"></div>
+   <div class="star star-2"></div>
+   <div class="star star-3"></div>
+   <div class="star star-4"></div>
+   <div class="star star-5"></div>
+   <div class="star star-6"></div>
+   <div class="star star-7"></div>
+   <div class="star star-8"></div>
+   <div class="star star-9"></div>
+   <div class="star star-10"></div>
+   <div class="star star-11"></div>
+   <div class="star star-12"></div>
+   <div class="star star-13"></div>
+   <div class="star star-14"></div>
+   <div class="star star-15"></div>
+   <div class="star star-16"></div>
+   <div class="star star-17"></div>
+   <div class="star star-18"></div>
+   <div class="star star-19"></div>
+   <div class="star star-20"></div>
+</div>
+</body>
+<script></script>
+</html>

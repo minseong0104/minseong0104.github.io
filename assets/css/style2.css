@@ -1,0 +1,122 @@
+section {position: relative; width: 100vw; height: 100vh; background-color: #000; overflow: hidden;}
+
+/* background */
+.background {
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+}    
+.background .background1 { 
+	width: 11.1111111111vw; 
+	height: 50vh;
+    overflow: hidden;
+    position: relative;
+    float: left;
+}
+.background .background2 {
+	width: 38.8888888889vw;
+	height: 50vh;
+    overflow: hidden;
+    position: relative;
+    float: left;
+}
+.background .background1 .bg {    
+	position: absolute;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+}
+.background .background2 .bg {    
+	position: absolute;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+}
+/* 배경 이미지 위치값 */
+.background .background1 .img1{
+	background: url(../img/kim7u.png); background-position: 0vw 0vh; background-size: 100vw 100vh;
+	transform: scale(1.2); transition: transform 2.8s 0.6s cubic-bezier(.645,.045,.355,1);
+}
+.background .background2 .img2{
+	background: url(../img/kim7u.png); background-position:89.111vw 0vh; background-size: 100vw 100vh; 
+	transform: scale(1.7); transition: transform 2.8s 0.6s cubic-bezier(.645,.045,.355,1);
+}
+.background .background2 .img3{
+	background: url(../img/kim7u.png); background-position:50.111vw 0vh; background-size: 100vw 100vh;
+	transform: scale(2); transition: transform 2.8s 0.6s cubic-bezier(.645,.045,.355,1);
+}
+.background .background1 .img4{
+	background: url(../img/kim7u.png); background-position:11.111vw 0; background-size: 100vw 100vh;
+	transform: scale(1.4); transition: transform 2.8s 0.6s cubic-bezier(.645,.045,.355,1);
+}
+.background .background1 .img5{
+	background: url(../img/kim7u.png); background-position:100.111vw 50vh; background-size: 100vw 100vh;
+	transform: scale(1.2); transition: transform 2.8s 0.6s cubic-bezier(.645,.045,.355,1);
+}
+.background .background2 .img6{
+	background: url(../img/kim7u.png); background-position:89.1vw 50vh; background-size: 100vw 100vh;
+	transform: scale(1.4); transition: transform 2.8s 0.6s cubic-bezier(.645,.045,.355,1);
+}
+.background .background2 .img7{
+	background: url(../img/kim7u.png); background-position:50.1vw 50vh; background-size: 100vw 100vh;
+	transform: scale(1.8); transition: transform 2.8s 0.6s cubic-bezier(.645,.045,.355,1);
+}
+.background .background1 .img8{
+	background: url(../img/kim7u.png); background-position:11.111vw 50vh; background-size: 100vw 100vh;
+	transform: scale(1.3); transition: transform 2.8s 0.6s cubic-bezier(.645,.045,.355,1);
+}
+
+.overlay.right {
+	position: absolute;
+	right: 0; top: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    background-color: #0e0e0e; transition: width 1s 2s ease;
+}
+.overlay.left {
+	position: absolute;
+	left: 0; top: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    background-color: #0e0e0e; transition: width 1s 2s ease;
+}
+body.active .background .background1 .bg {transform: scale(1);}
+body.active .background .background2 .bg {transform: scale(1);}
+body.active .overlay {width: 0; }
+
+/* progress */
+.progress {
+	background: rgba(0,0,0,1);
+	color: #fff;
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	z-index: 5000;
+}
+.progress-bar {
+	border-top: 1px solid rgba(160,160,160);	
+	position: absolute;
+	top: 50%; width: 0%;
+}
+.progress-text {
+	font-size: 14px; margin-top: 10px;
+	position: absolute;
+	text-align: center;
+	top: 50%; width: 100%;
+}
+.porgress-complete .progress-bar {
+	border-top-color: rgb(255,255,255);
+}

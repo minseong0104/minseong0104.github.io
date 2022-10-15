@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {margin: 0; padding: 0;}
+		body {background: #000; overflow: hidden;}
+		.wrap {width: 100%; margin: 0 auto;}
+		.box {float: left; width: 33.3333%;}
+		.box img {
+			width: 100%; height: 100%;
+			display: block;
+		/* 	object-fitject: cover; */
+			transition: all 0.5s ease-in-out;
+		}
+		.box:hover, .box:hover img {
+			filter: none;
+			background: transparent;
+			
+		}
+		.effect1 {
+			background-color: #00ff36;
+		}
+		.effect1 img {
+			mix-blend-mode: multiply;
+			filter: grayscale(100%) contrast(1);
+		}
+		.effect2 {
+			background-color: #e41c2d;
+		}
+		.effect2 img {
+			mix-blend-mode: multiply;
+			filter: grayscale(100%) contrast(0.8);
+		}
+		.effect3 {
+			background-color: #f1e3d0;
+		}
+		.effect3 img {
+			mix-blend-mode: darken;
+			filter: grayscale(100%) contrast(2);
+		}
+		.effect4 {
+			background-color: #fff;
+		}
+		.effect4 img {
+			mix-blend-mode : exclusion;
+			filter: grayscale(100%) contrast(1.5);
+		}
+		.effect5 {
+			background-color: #181e59;
+		}
+		.effect5 img {
+			mix-blend-mode: lighten;
+			filter: grayscale(100%) contrast(1.5);
+		}
+		.effect6 {
+			background-color: #77acd4;
+		}
+		.effect6 img {
+			mix-blend-mode: multiply;
+			filter: grayscale(100%) contrast(1.2);
+		}
+		.effect7 {
+			background-color: #ed060b;
+		}
+		.effect7 img {
+			mix-blend-mode: lighten;
+			filter: grayscale(100%) contrast(1.2);
+		}
+		.effect8 {
+			background-color: #fca300;
+		}
+		.effect8 img {
+			mix-blend-mode: darken;
+			filter: grayscale(100%) contrast(1.2);
+		}
+		.effect9 {
+			background-color: #88169d;
+		}
+		.effect9 img {
+			mix-blend-mode: lighten;
+			filter: grayscale(100%) contrast(1.5);
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="box effect1">
+			<img src="https://tistory4.daumcdn.net/tistory/2141493/skin/images/simg01.png">
+		</div>
+		<div class="box effect2">
+			<img src="https://tistory4.daumcdn.net/tistory/2141493/skin/images/simg01.png">
+		</div>
+		<div class="box effect3">
+			<img src="https://tistory4.daumcdn.net/tistory/2141493/skin/images/simg01.png">
+		</div>
+		<div class="box effect4">
+			<img src="https://tistory4.daumcdn.net/tistory/2141493/skin/images/simg01.png">
+		</div>
+		<div class="box effect5">
+			<img src="https://tistory4.daumcdn.net/tistory/2141493/skin/images/simg01.png">
+		</div>
+		<div class="box effect6">
+			<img src="https://tistory4.daumcdn.net/tistory/2141493/skin/images/simg01.png">
+		</div>
+		<div class="box effect7">
+			<img src="https://tistory4.daumcdn.net/tistory/2141493/skin/images/simg01.png">
+		</div>
+		<div class="box effect8">
+			<img src="https://tistory4.daumcdn.net/tistory/2141493/skin/images/simg01.png">
+		</div>
+		<div class="box effect9">
+			<img src="https://tistory4.daumcdn.net/tistory/2141493/skin/images/simg01.png">
+		</div>
+	</div>
+</body>
+</html>

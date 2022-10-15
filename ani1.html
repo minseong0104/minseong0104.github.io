@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {margin: 0; padding: 0;}
+		.jelly-container {
+		   width: 100vw;
+		   height: 100vh;
+		   background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+		   overflow: hidden;
+		}
+		div[class^="bubble"] {
+		   background-color: rgba(1,141,210,0.3);
+		   border-radius: 50%;
+		   position: absolute; bottom: 5px;
+		   
+		}
+		div[class^="bubble"]:after {
+		   content:'';
+		   border-top:1px solid rgba(255,255,255,0.63);
+		   position: absolute; left: 50%; top: 50%;
+		   transform: translate(-50%, -50%) rotate(-45deg);
+		   width: 85%; height: 85%;
+		   border-radius: 50%;
+		}
+		.bubble01 {left: 12%; animation:bubble-move 4s ease-in infinite 1.5s}
+		.bubble02 {left: 14%; animation:bubble-move 4s ease-in infinite 1.2s}
+		.bubble03 {left: 50%; animation:bubble-move 4s ease-in infinite 1.4s}
+		.bubble04 {left: 83%; animation:bubble-move 4s ease-in infinite 2.0s}
+		.bubble05 {left: 90%; animation:bubble-move 4s ease-in infinite 3.0s}
+		.bubble06 {left: 15%; animation:bubble-move 4s ease-in infinite 2.7s}
+		.bubble07 {left: 40%; animation:bubble-move 4s ease-in infinite 3.8s}
+		.bubble08 {left: 35%; animation:bubble-move 4s ease-in infinite 3.5s}
+		.bubble09 {left: 62%; animation:bubble-move 4s ease-in infinite 2.9s}
+		.bubble10 {left: 34%; animation:bubble-move 4s ease-in infinite 3.2s}
+		.bubble11 {left: 25%; animation:bubble-move 4s ease-in infinite 1.9s}
+		.bubble12 {left: 67%; animation:bubble-move 4s ease-in infinite 2.9s}
+		.bubble13 {left: 50%; animation:bubble-move 4s ease-in infinite 4.0s}
+		.bubble14 {left: 90%; animation:bubble-move 4s ease-in infinite 1.0s}
+		.bubble15 {left: 32%; animation:bubble-move 4s ease-in infinite 2.1s}
+		.bubble17 {left: 45%; animation:bubble-move 4s ease-in infinite 3.4s}
+		.bubble18 {left: 20%; animation:bubble-move 4s ease-in infinite 1.3s}
+		.bubble19 {left: 40%; animation:bubble-move 4s ease-in infinite 4.0s}
+		.bubble20 {left: 14%; animation:bubble-move 4s ease-in infinite 1.0s}
+
+
+		@keyframes bubble-move {
+		   0% {width: 0px; height: 0px; transform: translatey(0);}
+		   100% {width: 75px; height: 75px; transform: translatey(-1000px);}
+		}
+
+		.jelly-wrapper { 
+		   width: 256px; height: 300px;
+		   position: absolute; left: 50%; top: 50%;
+		   transform: translate(-50%,-50%);
+		/*    background: #ccc; */
+		   animation: jelly-movement 10s infinite linear;
+		}
+		@keyframes jelly-movement {
+		    0%   {top: 50%; left: 50%; }
+		    5%   {top: 55%; }
+		    10%  {top: 50%; }
+		    15%  {top: 55%; }
+		    20%  {top: 50%; }
+		    25%  {top: 55%; left: calc(100% - 150px);}
+		    30%  {top: 50%; }
+		    35%  {top: 55%; }
+		    40%  {top: 50px; }
+		    45%  {top: 55%; }
+		    50%  {top: 50%; left: 50%;}
+		    55%  {top: 55%; }
+		    60%  {top: 50%; }
+		    65%  {top: 55%; }
+		    70%  {top: 50%; }
+		    75%  {top: 55%; left: 150px;}
+		    80%  {top: 50%; }
+		    85%  {top: 55px; }
+		    90%  {top: 50%; }
+		    95%  {top: 55%; }
+		    100% {top: 50%; left: 50%;}
+		}
+		.jelly-hair {
+		   width: 100px; height: 80px;
+			 background: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+		   position: absolute; left: 40%; top: -30px;
+		   z-index: -2;
+			 border-radius: 120px  0px;
+		   animation: hair 10s infinite linear;
+		}
+		.jelly-hair2 {
+		   width: 100px; height: 80px;
+		   background: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+		   position: absolute; left: 30%; top: -30px;
+		   z-index: -2;
+			 border-radius: 120px  0px;
+		   animation: hair 10s infinite linear;
+		}
+		.jelly-hair3 {
+		   width: 100px; height: 80px;
+		   background: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+		   position: absolute; left: 20%; top: -30px;
+		   z-index: -2;
+			 border-radius: 120px  0px;
+		   animation: hair 10s infinite linear;
+		}
+
+		@keyframes hair {
+		    0%   {transform: rotate3d(0,1,0,180deg) rotate3d(0,0,1,75deg)}
+		    20%  {transform: rotate3d(0,1,0,180deg) rotate3d(0,0,1,75deg)}
+		    25%  {transform: rotate3d(0,1,0,90deg) rotate3d(0,0,1,75deg)}
+		    30%  {transform: rotate3d(0,1,0,0deg) rotate3d(0,0,1,75deg)}
+		    70%  {transform: rotate3d(0,1,0,0deg) rotate3d(0,0,1,75deg)}
+		    75%  {transform: rotate3d(0,1,0,90deg) rotate3d(0,0,1,75deg)}
+		    80%  {transform: rotate3d(0,1,0,180deg) rotate3d(0,0,1,75deg)}
+		    100% {transform: rotate3d(0,1,0,180deg) rotate3d(0,0,1,75deg)}
+		}
+		.jelly-body {
+		   position: relative;
+		   overflow: hidden;
+		   width: 100%; height: 250px;
+		   background: linear-gradient(to bottom, #30cfd0, #330867);
+		   border-top-left-radius: 70px;
+		   border-top-right-radius: 90px;
+		   animation: head-movement 10s infinite linear;
+		     z-index: 5;
+		}
+
+		@keyframes head-movement {
+		   0% {
+		      border-top-left-radius: 70px;
+		     border-top-right-radius: 90px;
+		   }
+		   20% { border-top-left-radius: 70px;
+		            border-top-right-radius: 90px;}
+		   25% { border-top-left-radius: 80px;
+		            border-top-right-radius: 80px;}
+		   30% { border-top-left-radius: 90px;
+		            border-top-right-radius: 70px;}
+		   70% {
+		            border-top-left-radius: 90px;
+		            border-top-right-radius: 70px;
+		   }
+		   75% {
+		      border-top-left-radius: 70px;
+		      border-top-right-radius: 90px;
+		   }
+		   100% {
+		      border-top-left-radius: 70px;
+		      border-top-right-radius: 90px;
+		   }
+		}
+
+		.jelly-inner {
+		    width: 100%; height: 200px;
+		/*  background-color: #fff; */
+		    position: absolute; left: 50%; top: 35%;
+		    animation: move 10s infinite linear;
+		}
+
+		@keyframes move {
+		    0% {left: 60%;}
+		    20% {left: 60%;}
+		    25% {left: 50%;}
+		    30% {left: 40%;}
+		    70% {left: 40%;}
+		    75% {left: 50%;}
+		    80% {left: 60%;}
+		    100% {left: 60%;}
+		}
+
+		.jelly-eye {
+		    position: absolute; top: -40px;
+		}
+		.jelly-eye:before {
+		    content:'';
+		    position: absolute; left: 40px;
+		    width: 60px; height: 20px;
+		    background-color: #fff;
+		    border-radius: 50%;
+		}
+		.jelly-eye:after {
+		    content:'';
+		    position: absolute; left: -60px;
+		    width: 60px; height: 20px;
+		    background-color: #fff;
+		    border-radius: 50%;
+		    animation: eye-blick 3.5s infinite linear;
+		}
+		.jelly-eye2 {
+		    position: absolute; top: -40px;
+				animation: eye-blick2 3.5s infinite linear;
+		}
+		.jelly-eye2:before {
+		    content:'';
+		    position: absolute; left: 40px;
+		    width: 20px; height: 20px;
+		    background-color: #000;
+		    border-radius: 50%;
+		}
+		.jelly-eye2:after {
+		    content:'';
+		    position: absolute; left: -60px;
+		    width: 20px; height: 20px;
+		    background-color: #000;
+		    border-radius: 50%;
+		}
+
+		@keyframes eye-blick {
+		    0% {height: 20px;}
+		    2% {height: 1px;}
+		    4% {height: 20px;}
+		    100% {height: 20px;}
+		}
+		@keyframes eye-blick2 {
+		    0%   {left: 40px;}
+				50%  {left: 1px;}
+		    100% {left: 40px;}
+		}
+
+
+		.jelly-mouth {
+		    position: absolute;
+		    width: 200px; height: 80px;
+		    background: #f4cfd1;
+		    border-radius: 30px;
+		    transform: translate(-50%)
+		}
+		.jelly-mouth:after {
+		    content:'';
+		    position: absolute; left: 50%; top: 50%;
+		    width: 80%; height: 50px;
+		    background: #ff9393;
+			  border-radius: 100px;
+		    transform: translate(-50%);
+		    box-shadow: 0 0 1px #ff6868;
+				animation: mouth 1.5s infinite;
+		}
+		@keyframes mouth {
+			0% {height: 1px;}
+			100% {height: 50px;}
+			
+		}
+		.jelly-hands {
+		    position: absolute; top: 10px;
+		}
+		.jelly-hands:before {
+		    content:'';
+		    width: 45px; height: 70px;
+		    box-shadow: 0 5px 6px #3b9c9b;
+		    position: absolute; left: 110px;
+		    border-radius: 0 0 50% 50%;
+		}
+		.jelly-hands:after {
+		    content:'';
+		    width: 45px; height: 70px;
+		    box-shadow: 0 5px 6px #3b9c9b;
+		    position: absolute; left: -150px;
+		    border-radius: 0 0 50% 50%;
+		}
+
+		.jelly-tentacle1 {
+		    width: 50px; height: 50px;
+		    background: #330867;
+		    border-radius: 0 0 50% 50%;
+		    box-shadow: 0 2.5px 0 #330867;
+		    position: absolute;
+		    left: 0;
+		    animation: tentacle 1s infinite ease-in;
+				z-index: 1;
+		}
+		.jelly-tentacle2 {
+		    width: 50px; height: 50px;
+		    background: #330867;
+		    border-radius: 0 0 50% 50%;
+		    box-shadow: 0 2.5px 0 #330867;
+		    position: absolute;
+		    left: 20%;
+		    animation: tentacle 1s infinite ease-in 1.5s;
+				z-index: 1;
+		}
+		.jelly-tentacle3 {
+		    width: 50px; height: 50px;
+		    background: #330867;
+		    border-radius: 0 0 50% 50%;
+		    box-shadow: 0 2.5px 0 #330867;
+		    position: absolute;
+		    left: 40%;
+		    animation: tentacle 1s infinite ease-in 0.7s;
+				z-index: 1;
+		}
+		.jelly-tentacle4 {
+		    width: 50px; height: 50px;
+		    background: #330867;
+		    border-radius: 0 0 50% 50%;
+		    box-shadow: 0 2.5px 0 #330867;
+		    position: absolute;
+		    left: 60%;
+		    animation: tentacle 1s infinite ease-in 0.5s;
+				z-index: 1;
+		}
+		.jelly-tentacle5 {
+		    width: 50px; height: 50px;
+		    background: #330867;
+		    border-radius: 0 0 50% 50%;
+		    box-shadow: 0 2.5px 0 #330867;
+		    position: absolute;
+		    left: 80%;
+		    animation: tentacle 1s infinite ease-in 1.5s;
+				z-index: 1;
+		}
+		.jelly-tentacle6 {
+		    width: 50px; height: 50px;
+		    background: #6a11cb;
+		    border-radius: 0 0 50% 50%;
+		    box-shadow: 0 2.5px 0 #6a11cb;
+		    position: absolute;
+		    left: 10%;
+		    animation: tentacle 1s infinite ease-in 0.5s;
+		}
+		.jelly-tentacle7 {
+		    width: 50px; height: 50px;
+		    background: #6a11cb;
+		    border-radius: 0 0 50% 50%;
+		    box-shadow: 0 2.5px 0 #6a11cb;
+		    position: absolute;
+		    left: 30%;
+		    animation: tentacle 1s infinite ease-in 0.8s;
+		}
+		.jelly-tentacle8 {
+		    width: 50px; height: 50px;
+		    background: #6a11cb;
+		    border-radius: 0 0 50% 50%;
+		    box-shadow: 0 2.5px 0 #6a11cb;
+		    position: absolute;
+		    left: 50%;
+		    animation: tentacle 1s infinite ease-in 2s;
+		}
+		.jelly-tentacle9 {
+		    width: 50px; height: 50px;
+		    background: #6a11cb;
+		    border-radius: 0 0 50% 50%;
+		    box-shadow: 0 2.5px 0 #6a11cb;
+		    position: absolute;
+		    left: 70%;
+		    animation: tentacle 1s infinite ease-in 1.5s;
+		}
+		@keyframes tentacle {
+		    0% {bottom: 0%;}
+		    50% {bottom: 8%;}
+		    100% {bottom: 0;}
+		}
+
+		.jelly-shadow {
+		    position: absolute;
+		    bottom: 5%; left: 50%;
+		    border-radius: 50%;
+		    width: 250px; height: 15px;
+		    background-color: rgba(134,134,134,0.23);
+		    transform: translate(-50%);
+		    box-shadow: 0 0 10px rgba(134,134,134,0.23);
+		    animation: shadow 10s infinite linear;
+		}
+		@keyframes shadow {
+		    0%   {width:200px; left: 50%; }
+		    5%   {width:250px; }
+		    10%  {width:200px; }
+		    15%  {width:250px; }
+		    20%  {width:200px; }
+		    25%  {width:250px; left: calc(100% - 150px);}
+		    30%  {width:200px; }
+		    35%  {width:250px; }
+		    40%  {width:200px; }
+		    45%  {width:250px; }
+		    50%  {width:200px; left: 50%;}
+		    55%  {width:250px; }
+		    60%  {width:200px; }
+		    65%  {width:250px; }
+		    70%  {width:200px; }
+		    75%  {width:250px; left: 150px;}
+		    80%  {width:200px; }
+		    85%  {width:250px; }
+		    90%  {width:200px; }
+		    95%  {width:250px; }
+		    100% {width:200px; left: 50%;}
+		}
+	</style>
+</head>
+<body>
+	<div class="jelly-container">
+	   <div class="bubble01"></div>
+	   <div class="bubble02"></div>
+	   <div class="bubble03"></div>
+	   <div class="bubble04"></div>
+	   <div class="bubble05"></div>
+	   <div class="bubble06"></div>
+	   <div class="bubble07"></div>
+	   <div class="bubble08"></div>
+	   <div class="bubble09"></div>
+	   <div class="bubble10"></div>
+	   
+	   <div class="jelly-wrapper">
+	      <div class="jelly-hair"></div>
+			 	<div class="jelly-hair2"></div>
+			 	<div class="jelly-hair3"></div>
+	      <div class="jelly-body">
+	                <div class="jelly-inner">
+	                    <div class="jelly-eye"></div>
+											<div class="jelly-eye2"></div>
+	                    <div class="jelly-mouth"></div>
+	                    <div class="jelly-hands"></div>
+	                </div>
+	         </div>
+	         <div class="jelly-tentacle1"></div>
+	         <div class="jelly-tentacle2"></div>
+	         <div class="jelly-tentacle3"></div>
+	         <div class="jelly-tentacle4"></div>
+	         <div class="jelly-tentacle5"></div>
+			 		 <div class="jelly-tentacle6"></div>
+	         <div class="jelly-tentacle7"></div>
+	         <div class="jelly-tentacle8"></div>
+	         <div class="jelly-tentacle9"></div>
+	   </div>
+	     <div class="jelly-shadow"></div>
+	     <div class="bubble11"></div>
+	   <div class="bubble12"></div>
+	   <div class="bubble13"></div>
+	   <div class="bubble14"></div>
+	   <div class="bubble15"></div>
+	   <div class="bubble16"></div>
+	   <div class="bubble17"></div>
+	   <div class="bubble18"></div>
+	   <div class="bubble19"></div>
+	   <div class="bubble20"></div>
+	</div>
+</body>
+</html>
